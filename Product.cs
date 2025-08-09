@@ -38,4 +38,10 @@ public class Product
     {
         return $"Name: {Name}, Price: {Price}, Quantity: {Quantity}";
     }
+    public void Update(string name, double price, int quantity)
+    {
+        Name = name;
+        Price = price;
+        Quantity = quantity;
+    }
 }

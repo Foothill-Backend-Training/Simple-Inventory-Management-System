@@ -25,4 +25,16 @@ public class Inventory
             Console.WriteLine(product);
         }
     }
+
+    public void UpdateProduct(string name, string newName, double newPrice, int newQuantity)
+    {
+        var product = products.FirstOrDefault(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+        if (product == null)
+        {
+            throw new ArgumentException("Product not found", nameof(name));
+        }
+
+        product.Update(newName, newPrice, newQuantity);
+        Console.WriteLine("Product was updated :)");
+    }
 }

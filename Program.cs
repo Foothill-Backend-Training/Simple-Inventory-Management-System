@@ -9,7 +9,8 @@ class Program
         {
             Console.WriteLine("\n--- Inventory Menu ---");
             Console.WriteLine("1. Add Product");
-            Console.WriteLine("2. Exit");
+            Console.WriteLine("2. View Products");
+            Console.WriteLine("3. Exit");
             Console.Write("Choose an option: ");
             string choice = Console.ReadLine();
             switch (choice)
@@ -27,6 +28,9 @@ class Program
                     inventory.AddProduct(name, price, quantity);
                     break;
                 case "2":
+                    inventory.ViewProducts();
+                    break;
+                case "3":
                     Console.WriteLine("Exiting...");
                     return;
                 default:

@@ -11,7 +11,8 @@ class Program
             Console.WriteLine("1. Add Product");
             Console.WriteLine("2. View Products");
             Console.WriteLine("3. Update Product");
-            Console.WriteLine("4. Exit");
+            Console.WriteLine("4. Delete Product");
+            Console.WriteLine("5. Exit");
             Console.Write("Choose an option: ");
             string choice = Console.ReadLine();
             switch (choice)
@@ -76,6 +77,24 @@ class Program
                     }
                     break;
                 case "4":
+                    Console.Write("Enter the product name to delete: ");
+                    string deleteName = Console.ReadLine();
+                    while (string.IsNullOrWhiteSpace(deleteName))
+                    {
+                        Console.WriteLine("Invalid product name.");
+                        deleteName = Console.ReadLine();
+                    }
+
+                    try
+                    {
+                        inventory.DeleteProduct(deleteName);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error deleting product: {ex.Message}");
+                    }
+                    break;
+                case "5":
                     Console.WriteLine("Exiting...");
                     return;
                 default:

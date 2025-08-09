@@ -37,4 +37,16 @@ public class Inventory
         product.Update(newName, newPrice, newQuantity);
         Console.WriteLine("Product was updated :)");
     }
+
+    public void DeleteProduct(string deleteName)
+    {
+        var product = products.FirstOrDefault(p => p.Name.Equals(deleteName, StringComparison.OrdinalIgnoreCase));
+        if (product == null)
+        {
+            throw new ArgumentException("Product not found", nameof(deleteName));
+        }
+
+        products.Remove(product);
+        Console.WriteLine("Product was deleted :)");
+    }
 }

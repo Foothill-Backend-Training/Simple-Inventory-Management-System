@@ -1,0 +1,15 @@
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\bin\Debug\net8.0\SimpleInventoryManagementSystem.exe
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\bin\Debug\net8.0\SimpleInventoryManagementSystem.deps.json
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\bin\Debug\net8.0\SimpleInventoryManagementSystem.runtimeconfig.json
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\bin\Debug\net8.0\SimpleInventoryManagementSystem.dll
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\bin\Debug\net8.0\SimpleInventoryManagementSystem.pdb
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\obj\Debug\net8.0\SimpleInventoryManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\obj\Debug\net8.0\SimpleInventoryManagementSystem.AssemblyInfoInputs.cache
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\obj\Debug\net8.0\SimpleInventoryManagementSystem.AssemblyInfo.cs
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\obj\Debug\net8.0\SimpleInventoryManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\obj\Debug\net8.0\SimpleInventoryManagementSystem.sourcelink.json
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\obj\Debug\net8.0\SimpleInventoryManagementSystem.dll
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\obj\Debug\net8.0\refint\SimpleInventoryManagementSystem.dll
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\obj\Debug\net8.0\SimpleInventoryManagementSystem.pdb
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\obj\Debug\net8.0\SimpleInventoryManagementSystem.genruntimeconfig.cache
+C:\Users\riham\Desktop\FTS\Simple-Inventory-Management-System\obj\Debug\net8.0\ref\SimpleInventoryManagementSystem.dll

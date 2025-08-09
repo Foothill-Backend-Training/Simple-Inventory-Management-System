@@ -28,25 +28,25 @@ public class Inventory
 
     public void UpdateProduct(string name, string newName, double newPrice, int newQuantity)
     {
-        var product = products.FirstOrDefault(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
-        if (product == null)
-        {
-            throw new ArgumentException("Product not found", nameof(name));
-        }
-
+        var product = FindProductByName(name);
         product.Update(newName, newPrice, newQuantity);
         Console.WriteLine("Product was updated :)");
     }
 
     public void DeleteProduct(string deleteName)
     {
-        var product = products.FirstOrDefault(p => p.Name.Equals(deleteName, StringComparison.OrdinalIgnoreCase));
-        if (product == null)
-        {
-            throw new ArgumentException("Product not found", nameof(deleteName));
-        }
-
+        var product = FindProductByName(deleteName);
         products.Remove(product);
         Console.WriteLine("Product was deleted :)");
+    }
+
+    private Product FindProductByName(string name)
+    {
+        var product = products.FirstOrDefault(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+        if (product == null)
+        {
+            throw new ArgumentException("Product not found", nameof(name));
+        }
+        return product;
     }
 }

@@ -18,6 +18,11 @@ class Program
                 case "1":
                     Console.Write("Product name: ");
                     string name = Console.ReadLine();
+                    while (string.IsNullOrWhiteSpace(name))
+                    {
+                        Console.Write("Name cannot be empty. Please enter a valid product name: ");
+                        name = Console.ReadLine();
+                    }
 
                     Console.Write("Price: ");
                     if (!double.TryParse(Console.ReadLine(), out double price)) price = 0;
@@ -25,7 +30,14 @@ class Program
                     Console.Write("Quantity: ");
                     if (!int.TryParse(Console.ReadLine(), out int quantity)) quantity = 0;
 
-                    inventory.AddProduct(name, price, quantity);
+                    try
+                    {
+                        inventory.AddProduct(name, price, quantity);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error adding product: {ex.Message}");
+                    }
                     break;
                 case "2":
                     inventory.ViewProducts();

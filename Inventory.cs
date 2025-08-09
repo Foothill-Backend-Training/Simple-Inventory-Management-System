@@ -40,7 +40,7 @@ public class Inventory
         Console.WriteLine("Product was deleted :)");
     }
 
-    private Product FindProductByName(string name)
+    public Product FindProductByName(string name)
     {
         var product = products.FirstOrDefault(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
         if (product == null)

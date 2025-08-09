@@ -12,7 +12,8 @@ class Program
             Console.WriteLine("2. View Products");
             Console.WriteLine("3. Update Product");
             Console.WriteLine("4. Delete Product");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("5. Search Product");
+            Console.WriteLine("6. Exit");
             Console.Write("Choose an option: ");
             string choice = Console.ReadLine();
             switch (choice)
@@ -95,6 +96,26 @@ class Program
                     }
                     break;
                 case "5":
+                    Console.Write("Enter the product name to search: ");
+                    string searchName = Console.ReadLine();
+                    while (string.IsNullOrWhiteSpace(searchName))
+                    {
+                        Console.WriteLine("Invalid product name.");
+                        searchName = Console.ReadLine();
+                    }
+
+                    try
+                    {
+                        var product = inventory.FindProductByName(searchName);
+                        Console.WriteLine("Product found:");
+                        Console.WriteLine(product);
+                    }
+                    catch (ArgumentException ex)
+                    {
+                        Console.WriteLine($"Error: {ex.Message}");
+                    }
+                    break;
+                case "6":
                     Console.WriteLine("Exiting...");
                     return;
                 default:
